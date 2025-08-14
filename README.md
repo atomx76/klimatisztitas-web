@@ -1,1 +1,1 @@
-blabla
+Vállalkozás klíma szekciójának weboldala

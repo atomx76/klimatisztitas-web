@@ -1,102 +1,136 @@
 <!DOCTYPE html>
-<html lang="hu" class="dark">
+
+<html class="dark" lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Klímatisztítás és Karbantartás</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta content="hu" http-equiv="Content-Language"/><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Klímatisztítás és Karbantartás</title>
+<script src="https://cdn.tailwindcss.com"></script><style>
+/* Szolgáltatás dobozok leírásainak sorkizárása és elválasztása (HU) */
+.service-box p{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+/* Címek középre igazítása (biztos ami biztos) */
+.service-box h2{
+  text-align: center;
+}
+</style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
-
-<div id="app" class="space-y-16">
-
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-indigo-700 to-cyan-500 p-16 text-center rounded-b-3xl shadow-2xl">
-        <h1 class="text-5xl font-extrabold mb-4">Klímatisztítás & Karbantartás</h1>
-        <p class="text-xl mb-8">Friss levegő minden otthonba – gyors, profi, megbízható!</p>
-        <img id="header-image" alt="Klímatisztítás" class="mx-auto mb-8 rounded-3xl shadow-xl">
-        <button 
-            onclick="window.open('https://calendar.app.google/3qpriMZw6sGfGuw49', '_blank');" 
-            class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1">
-            Időpontfoglalás
-        </button>
-    </header>
-
-    <!-- Why Choose Us Section -->
-    <section class="max-w-6xl mx-auto p-12 bg-gray-800 rounded-3xl shadow-xl space-y-6">
-        <h2 class="text-3xl font-bold text-center mb-6">Miért minket válassz?</h2>
-        <p>Kisgyermekes családoknak ideális, hiszen eltávolítjuk a port, polleneket és baktériumokat, így a gyerekek tiszta levegőben játszhatnak és lélegezhetnek.</p>
-        <p>Allergiások és érzékeny légzőrendszerrel rendelkezők számára különösen előnyös a mélytisztítás, amely eltávolít minden káros mikroorganizmust és szennyeződést.</p>
-        <p>Gyors és precíz kiszállásunkkal garantáljuk, hogy a klímád mindig higiénikus, hatékony és energiatakarékos marad. Környezetbarát vegyszereket használunk, így minden családtag számára biztonságos.</p>
-        <img id="why-us-image" alt="Tiszta klíma" class="mx-auto mt-6 rounded-3xl shadow-lg">
-    </section>
-
-    <!-- Services Section -->
-    <section class="max-w-6xl mx-auto p-12 grid md:grid-cols-3 gap-10">
-        <div class="bg-gray-800 rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300">
-            <img id="service1-image" alt="Mélytisztítás" class="mb-6 rounded-2xl shadow-md">
-            <h2 class="text-2xl font-semibold mb-3">Vegyszeres Mélytisztítás</h2>
-            <p id="service1Text" onclick="document.getElementById('service1Modal').classList.remove('hidden');" style="cursor:pointer;">Eltávolítjuk a port, gombákat és baktériumokat, hogy klímád mindig friss levegőt biztosítson.</p>
-        </div>
-        <div class="bg-gray-800 rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300">
-            <img id="service2-image" alt="Karbantartás" class="mb-6 rounded-2xl shadow-md">
-            <h2 class="text-2xl font-semibold mb-3">Karbantartás és Ellenőrzés</h2>
-            <p id="service2Text" onclick="document.getElementById('service2Modal').classList.remove('hidden');" style="cursor:pointer;">Nyomás- és hőmérséklet-ellenőrzés, hogy a készüléked mindig hatékonyan és biztonságosan működjön.</p>
-        </div>
-        <div class="bg-gray-800 rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300">
-            <h2 class="text-2xl font-semibold mb-3">Extra Szolgáltatásaink</h2>
-            <p id="adviceText" onclick="document.getElementById('adviceModal').classList.remove('hidden');" style="cursor:pointer;">Személyre szabott tippek a készülék hosszú élettartamához és optimális használatához.</p>
-        </div>
-    </section>
-
-    <!-- Modal for Service1 Details -->
-    <div id="service1Modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-        <div class="bg-gray-800 p-8 rounded-3xl max-w-xl text-white relative">
-            <h3 class="text-2xl font-bold mb-4">Részletes Mélytisztítás</h3>
-            <p>Ez a szolgáltatás magában foglalja a port, gombák és baktériumok teljes eltávolítását a klímaberendezésből, így mindig friss és tiszta levegőt biztosít otthonodban. Különösen hasznos kisgyermekes családoknak és allergiásoknak, akik tiszta és egészséges környezetet szeretnének.</p>
-            <button onclick="document.getElementById('service1Modal').classList.add('hidden');" class="mt-6 bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold">Bezárás</button>
-        </div>
-    </div>
-
-    <!-- Modal for Service2 Details -->
-    <div id="service2Modal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-        <div class="bg-gray-800 p-8 rounded-3xl max-w-xl text-white relative">
-            <h3 class="text-2xl font-bold mb-4">Részletes Karbantartás</h3>
-            <p>A karbantartás során ellenőrizzük a készülék nyomását és hőmérsékletét, biztosítva, hogy a klímaberendezés mindig optimálisan és biztonságosan működjön. Ez növeli az élettartamot, csökkenti a hibalehetőséget, és garantálja a hatékony energiafelhasználást.</p>
-            <button onclick="document.getElementById('service2Modal').classList.add('hidden');" class="mt-6 bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold">Bezárás</button>
-        </div>
-    </div>
-
-    <!-- Modal for Advice -->
-    <div id="adviceModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-        <div class="bg-gray-800 p-8 rounded-3xl max-w-xl text-white relative">
-            <h3 class="text-2xl font-bold mb-4">Részletes Tanácsadás</h3>
-            <p>Ide tartozik a gyors kiszállás, a készülék optimális beállításának tanácsadása, a rendszeres karbantartási tippek, és megelőző javaslatok a hosszú élettartamért. Hasznos azoknak is, akik szeretnék maximalizálni klímájuk teljesítményét és energiahatékonyságát.</p>
-            <button onclick="document.getElementById('adviceModal').classList.add('hidden');" class="mt-6 bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-full font-semibold">Bezárás</button>
-        </div>
-    </div>
-
-    <!-- Pricing Section -->
-    <section class="text-center py-16 bg-gray-900 rounded-3xl shadow-xl max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8">Árak</h2>
-        <p class="text-lg mb-3">Klíma tisztítás + karbantartás: 20 000 Ft / készülék</p>
-        <p class="text-lg mb-3">Öt készülék felett: 15 000 Ft / készülék</p>
-        <p>Kiszállás a városon belül ingyenes</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="bg-cyan-600 text-white text-center p-12 rounded-3xl shadow-xl space-y-3">
-        <h2 class="text-3xl font-bold mb-6">Kapcsolat</h2>
-        <p>📞 Telefon: <a href="tel:+36201234567" class="underline font-semibold">+36 20 220 2499</a></p>
-        <p>📧 E-mail: <a href="mailto:gdleptech@gmail.com" class="underline font-semibold">gdleptech@gmail.com</a></p>
-        <p>📍 Szolgáltatási terület: Gödöllő, Budapest és környéke</p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center p-6 bg-gray-950 text-sm rounded-t-3xl">
-        &copy; 2025 GDL Épülettechnika – Minden jog fenntartva.
-    </footer>
-
+<div class="space-y-8" id="app">
+<!-- Fejléc (kép: images/header.jpg) -->
+<header class="relative p-8 text-center rounded-b-3xl shadow-2xl bg-cover bg-center" style="background-image: url('images/header.jpg'); background-color:#0f172a;">
+<div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/70 rounded-b-3xl"></div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h1 class="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">
+        Klímatisztítás &amp; Karbantartás
+      </h1>
+<p class="text-xl mb-8 text-gray-100 drop-shadow-lg">Tiszta levegő, hatékony működés – szakértő klímagondozás!</p>
+<button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:-translate-y-1" onclick="window.open('https://calendar.app.google/3qpriMZw6sGfGuw49', '_blank');">
+        Időpontfoglalás
+      </button>
 </div>
+</header>
+<!-- Miért minket -->
+<section class="max-w-6xl mx-auto p-8 bg-gray-800 rounded-3xl shadow-xl space-y-6">
+<h2 class="text-3xl font-bold text-center mb-6">Miért minket válassz?</h2>
+<ul class="space-y-3 list-disc list-inside text-gray-100"><li><strong>Egészséges otthoni levegő – </strong>Eltávolítjuk a felgyűlt szennyeződéseket, hogy a család minden tagja nyugodtan lélegezhessen.</li><li><strong>Személyre szabott megoldások – </strong>A készülék állapotához és a használati szokásokhoz igazítjuk a tisztítást és a karbantartást.</li><li><strong>Gyors és pontos kivitelezés – </strong>Rugalmas időpontok, pontos érkezés, átlátható munkavégzés.</li><li><strong>Környezetkímélő technológia – </strong>Hatékony, de kímélő szereket és módszereket alkalmazunk.</li></ul></section>
+<!-- Szolgáltatások (3 doboz – kattinthatók, saját háttérképpel) -->
+<section class="max-w-6xl mx-auto p-8 grid md:grid-cols-3 gap-10">
+<!-- 1) Vegyszeres Mélytisztítás (kép: images/service1.jpg) -->
+<div aria-label="Vegyszeres Mélytisztítás részletek megnyitása" class="service-box rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer bg-cover bg-center min-h-[260px] flex" data-modal="service1Modal" style="background-image: url('images/service1.jpg'); background-color:#111827;">
+<div class="bg-black/55 p-8 rounded-3xl m-0 w-full flex flex-col justify-start items-center text-center">
+<h2 class="text-2xl font-semibold mb-3 text-center">Vegyszeres Mélytisztítás</h2>
+<p class="text-justify break-words hyphens-auto">Hőcserélő és légjáratok higiénikus, vegyszeres tisztítása a kellemetlen szagok és kórokozók ellen.</p>
+</div>
+</div>
+<!-- 2) Karbantartás és Ellenőrzés (kép: images/service2.jpg) -->
+<div aria-label="Karbantartás és ellenőrzés részletek megnyitása" class="service-box rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer bg-cover bg-center min-h-[260px] flex" data-modal="service2Modal" style="background-image: url('images/service2.jpg'); background-color:#111827;">
+<div class="bg-black/55 p-8 rounded-3xl m-0 w-full flex flex-col justify-start items-center text-center">
+<h2 class="text-2xl font-semibold mb-3 text-center">Karbantartás és Ellenőrzés</h2>
+<p class="text-justify break-words hyphens-auto">Teljesítmény- és állapotvizsgálat: nyomás, hőmérséklet, elektromos csatlakozások és szűrők ellenőrzése.</p>
+</div>
+</div>
+<!-- 3) Extra Szolgáltatásaink (kép: images/service3.jpg) -->
+<div aria-label="Extra szolgáltatások részletek megnyitása" class="service-box rounded-3xl shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer bg-cover bg-center min-h-[260px] flex" data-modal="adviceModal" style="background-image: url('images/service3.jpg'); background-color:#111827;">
+<div class="bg-black/55 p-8 rounded-3xl m-0 w-full flex flex-col justify-start items-center text-center">
+<h2 class="text-2xl font-semibold mb-3 text-center">Extra Szolgáltatásaink</h2>
+<p class="text-justify break-words hyphens-auto">Használati tippek, energia-megtakarítási beállítások és szezonális karbantartási ütemezés.</p>
+</div>
+</div>
+</section>
+<!-- Modálok -->
+<div class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" id="service1Modal">
+<div class="bg-gray-800 p-8 rounded-3xl max-w-xl w-full text-white relative"><span class="absolute top-3 right-5 text-3xl cursor-pointer hover:text-orange-500 select-none" data-close="x" onclick="document.getElementById('service1Modal').classList.add('hidden');">✕</span><span class="absolute top-3 right-5 text-3xl cursor-pointer hover:text-orange-500" onclick="document.getElementById('service1Modal').classList.add('hidden');">✕</span>
+<h3 class="text-2xl font-bold mb-4">Részletes Mélytisztítás</h3>
+<p>A teljes levegőút és hőcserélő kíméletes, de hatékony vegyszeres tisztítása. Csökkenti a szagokat, higiénikusabbá teszi a készüléket és javítja a levegőminőséget.</p>
+</div>
+</div>
+<div class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" id="service2Modal">
+<div class="bg-gray-800 p-8 rounded-3xl max-w-xl w-full text-white relative"><span class="absolute top-3 right-5 text-3xl cursor-pointer hover:text-orange-500 select-none" data-close="x" onclick="document.getElementById('service2Modal').classList.add('hidden');">✕</span><span class="absolute top-3 right-5 text-3xl cursor-pointer hover:text-orange-500" onclick="document.getElementById('service2Modal').classList.add('hidden');">✕</span>
+<h3 class="text-2xl font-bold mb-4">Részletes Karbantartás</h3>
+<p>Komplett műszaki ellenőrzés: hűtőközeg-nyomás és hőmérséklet mérés, elektromos kötések átnézése, szűrők állapota, próbaüzem. Cél: stabil, biztonságos és hatékony működés.</p>
+</div>
+</div>
+<div class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4" id="adviceModal">
+<div class="bg-gray-800 p-8 rounded-3xl max-w-xl w-full text-white relative"><span class="absolute top-3 right-5 text-3xl cursor-pointer hover:text-orange-500 select-none" data-close="x" onclick="document.getElementById('adviceModal').classList.add('hidden');">✕</span><span class="absolute top-3 right-5 text-3xl cursor-pointer hover:text-orange-500" onclick="document.getElementById('adviceModal').classList.add('hidden');">✕</span>
+<h3 class="text-2xl font-bold mb-4">Részletes Tanácsadás</h3>
+<p>Gyakorlati útmutató a megfelelő hőmérséklet-beállításhoz, energiafogyasztás csökkentéséhez és a szezonális karbantartás tervezéséhez – az Ön igényeire szabva.</p>
+</div>
+</div>
+<!-- Árak -->
+<section class="text-center py-8 bg-gray-900 rounded-3xl shadow-xl max-w-4xl mx-auto">
+<h2 class="text-3xl font-bold mb-8">Árak</h2>
+<p class="text-lg mb-3">Klíma tisztítás + karbantartás: 20 000 Ft / készülék</p>
+<p class="text-lg mb-3">Öt készülék felett: 15 000 Ft / készülék</p>
+<p>Kiszállás a városon belül ingyenes</p>
+</section>
+<!-- Kapcsolat -->
+<section class="bg-cyan-600 text-white text-center p-8 rounded-3xl shadow-xl space-y-3">
+<h2 class="text-3xl font-bold mb-6">Kapcsolat</h2>
+<p>📞 Telefon: <a class="underline font-semibold" href="tel:+36201234567">+36 20 220 2499</a></p>
+<p>📧 E-mail: <a class="underline font-semibold" href="mailto:gdleptech@gmail.com">gdleptech@gmail.com</a></p>
+<p>📍 Szolgáltatási terület: Gödöllő, Budapest és környéke</p>
+</section>
+<!-- Lábjegyzet -->
+<footer class="text-center p-6 bg-gray-950 text-sm rounded-t-3xl">
+    © 2025 GDL Épülettechnika – Minden jog fenntartva.
+  </footer>
+</div>
+<script>
+  // Szolgáltatás dobozok kattintása -> a megfelelő modál nyitása
+  document.querySelectorAll('.service-box').forEach(box => {
+    box.addEventListener('click', () => {
+      const modalId = box.getAttribute('data-modal');
+      document.getElementById(modalId).classList.remove('hidden');
+    });
+  });
+</script>
+<script>
+// Close modals when clicking outside content
+document.querySelectorAll('[id$="Modal"]').forEach(modal => {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+});
+</script>
+<script>
+  // Kattintás a modálon kívül: zárás
+  document.querySelectorAll('[id$="Modal"]').forEach(function(modal){
+    modal.addEventListener('click', function(e){
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  });
+</script>
 </body>
 </html>
